@@ -32,6 +32,13 @@ import 'c2pa-wc';
 
     manifestSummary.manifestStore = l2ManifestStore;
     manifestSummary.viewMoreUrl = generateVerifyUrl(image.src);
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    }
+    
+    if (isIOS()) {
+      manifestSummary.manifestStore = l2ManifestStore;
+    } 
   } catch (err) {
     console.error('Error reading image:', err);
   }
@@ -44,13 +51,5 @@ import 'c2pa-wc';
     } else {
       console.error('cai-icon-info element not found');
     }
-
-    function isIOS() {
-      return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    }
-    
-    if (isIOS()) {
-      manifestSummary.manifestStore = l2ManifestStore;
-    } 
 
 })();
