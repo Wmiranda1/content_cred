@@ -35,4 +35,22 @@ import 'c2pa-wc';
   } catch (err) {
     console.error('Error reading image:', err);
   }
+
+  const iconElement = document.querySelector('cai-popover');
+    if (iconElement) {
+      iconElement.addEventListener('mouseover', () => {
+        console.log('cai-icon-info element hovered');
+      });
+    } else {
+      console.error('cai-icon-info element not found');
+    }
+
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    }
+    
+    if (isIOS()) {
+      manifestSummary.manifestStore = l2ManifestStore;
+    } 
+
 })();

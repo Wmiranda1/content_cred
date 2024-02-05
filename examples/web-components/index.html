@@ -7,15 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>quick-start</title>
   <script type="module" src="./main.ts"></script>
-  <link rel='stylesheet' id='aquent/scripts/main.js-css' href='https://aquent.com/wp-content/themes/wp-theme-aquent/dist/front/main-ef7cc71b.css?ver=6.4.2' media='all' />
+  <link rel='stylesheet' id='aquent/scripts/main.js-css' href='https://aquent.com/wp-content/themes/wp-theme-aquent/dist/front/main-1ed62368.css?ver=6.4.2' media='all' />
 <link rel='preload' as='style' id='preload-typekit-css' href='//use.typekit.net/lxo3jpv.css' media='all' />
+<style>
+  img {
+    margin-top: -36px;
+  }
+</style>
 </head>
 
 <body>
   
   <div style="position: relative">
-    <cai-popover interactive style="float: right; position: relative; top: 40px; left: -10px;">
-      <cai-indicator slot="trigger"></cai-indicator>
+    <cai-popover  interactive style="float: right; position: relative; top: 20px; left: -10px; width: 32px;">
+      <cai-indicator id="shadow_host" slot="trigger"></cai-indicator>
       <cai-manifest-summary slot="content"></cai-manifest-summary>
     </cai-popover>
     <img width="100%" src="./blogImage.jpg" />
@@ -41,6 +46,11 @@
       <div class="post-hero__subtitle">Join us on an immersive architecture adventure.</div>
     </div><!-- .post-hero__section__inner -->
   </div>
+<style>
+  .icon {
+    display: none !important;
+  }
+</style>
 </body>
 
 </html>
